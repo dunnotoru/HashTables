@@ -58,10 +58,11 @@ void HashTable::remove(int value)
 	}
 }
 
-bool HashTable::isExists(int value)
+bool HashTable::isExists(int value, long& probe_count)
 {
 	for (size_t i = 0; i < _size; i++)
 	{
+		probe_count += 1;
 		int hash = getHash(value, i);
 		if (_table[hash].isEmpty == true) {	
 			return false;

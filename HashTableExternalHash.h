@@ -16,7 +16,6 @@ private:
     int getHash(int value);
 public:
     HashTableExternalHash(int size) : _size(size), table(size) {}
-    ~HashTableExternalHash();
     void add(int value);
     void remove(int value);
     bool isExists(int value);

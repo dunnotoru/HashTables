@@ -11,9 +11,8 @@ public:
 	HashTable(int size);
 	~HashTable();
 	void add(int value);
-	void rehash();
 	void remove(int value);
-	bool isExists(int value);
+	bool isExists(int value, long& probe_count);
 	void print();
 };
 
